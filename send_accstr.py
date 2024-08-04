@@ -62,7 +62,7 @@ while True:
 
     try:
         Socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  #// AF_INET=IPv4, SOCK_STREAM=TCP/IP
-        Socket1.settimeout(5)
+        Socket1.settimeout(5)# 短すぎるとエラー
         Socket1.connect((ip,port))
         Socket1.sendall(bytes(send_message,'utf-8'))
         Receive1 = Socket1.recv(1024)
